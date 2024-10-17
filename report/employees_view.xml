@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="hr_employee_inherit_benefits" model="ir.ui.view">
+        <field name="name">hr.employee.view.form.inherit</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header" position="inside">
+                <button string="Print employee benefits" name="print_xls_benefits_report" type="object" class="oe_highlight"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

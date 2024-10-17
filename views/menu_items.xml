@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem
+        id="employee_benefits_menu_root"
+        name="Benefits"
+        sequence="10"/>
+    
+
+    <menuitem
+        id="hr_employee_benefits_menu"
+        name="Employees Benefits"
+        action="hr_employee_benefits_action"
+        parent="employee_benefits_menu_root"
+        sequence="10"/>
+
+
+</odoo>

@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_employee_benefits_hr_manager,hr.employee.benefits.hr_manager,model_hr_employee_benefits,hr.group_hr_manager,1,1,1,1
+access_employee_benefits_team_leader,hr.employee.benefits.team_leader,model_hr_employee_benefits,group_team_leader,1,0,1,0
+access_employee_benefits_employee,hr.employee.benefits.employee,model_hr_employee_benefits,base.group_user,1,0,0,0
+access_employee_benefit_report_user,employee.benefit.report,model_employee_benefit_report,base.group_user,1,0,0,0

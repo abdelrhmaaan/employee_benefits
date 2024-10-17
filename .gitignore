@@ -1,0 +1,44 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info
+*.pyo
+
+# Virtual environment
+venv/
+ENV/
+env/
+.Python
+
+# Odoo-specific files
+*.log
+*.pot
+*.mo
+*.swp
+*.tmp
+
+# Database and backup files
+*.sql
+*.sqlite
+*.bak
+
+# Compiled files
+*.o
+*.pyc
+
+# IDE specific files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Distribution packages
+dist/
+build/
+*.tar.gz
+
+# Odoo customizations
+custom_addons/
+addons/

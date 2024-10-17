@@ -1,0 +1,37 @@
+<odoo>
+    <record id="rule_employee_benefits_hr_manager" model="ir.rule">
+        <field name="name">Employee Benefits: HR Manager</field>
+        <field name="model_id" ref="model_hr_employee_benefits"/>
+        <field name="groups" eval="[(4, ref('hr.group_hr_manager'))]"/>
+        <field name="domain_force">[(1, '=', 1)]</field>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_write" eval="True"/>
+        <field name="perm_create" eval="True"/>
+        <field name="perm_unlink" eval="True"/>
+    </record>
+
+
+    <!-- Team Leader: Can only view and create benefits for employees they manage -->
+    <record id="rule_employee_benefits_team_leader" model="ir.rule">
+        <field name="name">Employee Benefits: Team Leader</field>
+        <field name="model_id" ref="model_hr_employee_benefits"/>
+        <field name="groups" eval="[(4, ref('employee_benefits.group_team_leader'))]"/>
+        <field name="domain_force">[('employee_id.parent_id.user_id', '=', user.id)]</field>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_write" eval="False"/>
+        <field name="perm_create" eval="True"/>
+        <field name="perm_unlink" eval="False"/>
+    </record>
+
+    <!-- Employee: Can only view their own benefits -->
+    <record id="rule_employee_benefits_employee" model="ir.rule">
+        <field name="name">Employee Benefits: Employee</field>
+        <field name="model_id" ref="model_hr_employee_benefits"/>
+        <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+        <field name="domain_force">[('employee_id.user_id', '=', user.id)]</field>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_write" eval="False"/>
+        <field name="perm_create" eval="False"/>
+        <field name="perm_unlink" eval="False"/>
+    </record>
+</odoo>
